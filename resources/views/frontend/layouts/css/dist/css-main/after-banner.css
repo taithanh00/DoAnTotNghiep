@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import "animate.css";
+body {
+    font-family: "Dancing Script", cursive;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding-right: 0 !important;
+    margin-right: 168px;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    text-align: center;
+}
+
+#afterbanner_main div {
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#gradient-text {
+    background-color: #ca4246;
+    background-image: linear-gradient( 45deg, #ca4246 16.666%, #e16541 16.666%, #e16541 33.333%, #f18f43 33.333%, #f18f43 50%, #8b9862 50%, #8b9862 66.666%, #476098 66.666%, #476098 83.333%, #a7489b 83.333%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+}
+
+#gradient-text:hover {
+    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
+    }
+}
+
+.h3-after {
+    font-family: "Dancing Script", cursive;
+    font-weight: normal;
+    font-size: 6em;
+    text-align: center;
+    margin-bottom: 0;
+    margin-bottom: -0.25em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    width: 605px;
+    margin-top: 100px;
+    margin-left: 34px;
+}
+
+.card {
+    padding: 10px;
+    min-width: 300px;
+    min-height: 400px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    padding-left: 20px;
+}
+
+.content {
+    margin-top: 1rem;
+}
+
+.content .header {
+    margin-top: 0.5rem;
+}
+
+.image {
+    width: 100%;
+    height: 150px;
+    border-radius: 4px;
+    padding: 9px;
+}
+
+.image img {
+    object-fit: contain;
+    margin-bottom: -50px;
+    width: fit-content;
+    height: fit-content;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* .tag {
+    text-transform: capitalize;
+    background-color: rgba(0, 0, 0, 0.425);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #fff;
+} */
+
+
+/* .date {
+    display: flex;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    align-items: center;
+    margin: 2px;
+    margin-top: 20px;
+} */
+
+.title {
+    font-family: "Kaushan Script", cursive;
+    display: block;
+    font-size: 1.25rem;
+    line-height: 1.35rem;
+    font-weight: 600;
+    padding-bottom: 5px;
+    padding-top: 14px;
+    text-decoration: none;
+}
+
+.description {
+    line-height: 1.375;
+    font-size: 13px;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    .left {
+        float: left;
+        width: 30%;
+        height: auto;
+    }
+    .h3-after {
+        font-family: "Dancing Script", cursive;
+        font-weight: normal;
+        font-size: 4.3em;
+        text-align: center;
+        margin-bottom: 0;
+        margin-bottom: -0.25em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+        margin-top: 100px;
+        margin-left: -35px;
+    }
+    .right {
+        position: relative;
+        float: left;
+        width: 70%;
+        height: auto;
+    }
+    .grid-container {
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+        margin-left: 110px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    #afterbanner_main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .left {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    .left h3 {
+        text-align: center;
+        font-size: 60px;
+        font-weight: 500;
+        top: 50%;
+        left: 50%;
+        margin-top: 200px;
+        transform: translateY(-50%);
+        margin-left: 55px;
+        margin-bottom: 100px;
+        /* padding: 0;
+        margin: 0; */
+    }
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-direction: row;
+    }
+    .card {
+        min-width: 100px;
+        min-height: auto;
+    }
+    .info {
+        margin-top: 80px;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    #afterbanner_main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .left {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    .left h3 {
+        text-align: center;
+        font-size: 60px;
+        font-weight: 500;
+        top: 50%;
+        left: 50%;
+        margin-top: 200px;
+        transform: translateY(-50%);
+        margin-left: 55px;
+        margin-bottom: 100px;
+        /* padding: 0;
+        margin: 0; */
+    }
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-direction: row;
+    }
+    .grid-container div {
+        width: 100%;
+    }
+    .card {
+        width: 150px !important;
+        height: full;
+    }
+    .info {
+        margin-top: 80px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    #afterbanner_main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .left {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    .left h3 {
+        text-align: center;
+        font-size: 60px;
+        font-weight: 500;
+        top: 50%;
+        left: 50%;
+        margin-top: 200px;
+        transform: translateY(-50%);
+        margin-left: -121px;
+        margin-bottom: 100px;
+        /* padding: 0;
+        margin: 0; */
+    }
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: 10vw;
+    }
+    .grid-container div {
+        width: 100%;
+    }
+}
+
+
+/* Portrait /
+@media screen and (orientation:portrait) { / Portrait styles here / }
+/ Landscape /
+@media screen and (orientation:landscape) { / Landscape styles here */
+
+
+/* CSS for iPhone, iPad, and Retina Displays */
+
+
+/* Non-Retina */
+
+@media screen and (-webkit-max-device-pixel-ratio: 1) {}
+
+
+/* Retina */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {}
+
+
+/* iPhone Portrait */
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {}
+
+
+/* iPhone Landscape */
+
+@media screen and (max-device-width: 480px) and (orientation: landscape) {}
+
+
+/* iPad Portrait */
+
+@media screen and (min-device-width: 481px) and (orientation: portrait) {}
+
+
+/* iPad Landscape */
+
+@media screen and (min-device-width: 481px) and (orientation: landscape) {}

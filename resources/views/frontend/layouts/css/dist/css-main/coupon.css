@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+.coupon-main {
+    display: flex;
+    background: #f1f6f9;
+    width: 100%;
+    /* min-height: 100vh; */
+    min-height: 700px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    overflow: hidden;
+}
+
+.coupon-main-left {
+    display: block;
+    flex: 50%;
+    width: 50%;
+    height: 100%;
+    /* display: flex; */
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    /* justify-content: center; */
+    background: #f1f6f9;
+}
+
+.coupon-main-right {
+    flex: 50%;
+    width: 50%;
+    height: 100%;
+    background: #f1f6f9;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.coupon {
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.5));
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.coupon::before,
+.coupon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+}
+
+.coupon::before {
+    left: 0;
+    background-image: radial-gradient(circle at 0 50%, transparent 25px, #B2A4FF 26px);
+}
+
+.coupon::after {
+    right: 0;
+    background-image: radial-gradient(circle at 100% 50%, transparent 25px, #B2A4FF 26px);
+}
+
+.coupon>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coupon-left {
+    width: 20%;
+    border-right: 2px dashed rgba(0, 0, 0, 0.13);
+}
+
+.coupon-left div {
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.coupon-center {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.coupon-right {
+    width: 120px;
+    background-image: radial-gradient(circle at 100% 50%, transparent 25px, #fff 26px);
+}
+
+.coupon-right div {
+    font-family: "Libre Barcode 128 Text", cursive;
+    /* font-size: 2.5rem; */
+    font-size: 1.25em;
+    font-weight: 400;
+    transform: rotate(-90deg);
+}
+
+.coupon-center h2 {
+    background: #000;
+    color: gold;
+    padding: 0 10px;
+    font-size: 2.15rem;
+    white-space: nowrap;
+}
+
+.coupon-center h3 {
+    font-size: 2.15rem;
+}
+
+.coupon-center small {
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width:500px) {
+    .coupon {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .coupon-left div {
+        transform: rotate(0deg);
+    }
+    .coupon-right div {
+        transform: rotate(0deg);
+    }
+}
+
+#coupon-ml1 {
+    margin-left: 7em;
+}
+
+#coupon-ml2 {
+    margin-left: 7em !important;
+}
+
+.title-word {
+    font-family: 'Dancing Script', cursive;
+    animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+}
+
+.title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+    0% {
+        color: var(--color-1)
+    }
+    32% {
+        color: var(--color-1)
+    }
+    33% {
+        color: var(--color-2)
+    }
+    65% {
+        color: var(--color-2)
+    }
+    66% {
+        color: var(--color-3)
+    }
+    99% {
+        color: var(--color-3)
+    }
+    100% {
+        color: var(--color-1)
+    }
+}
+
+
+/* Here are just some visual styles. 🖌 */
+
+.coupon-title {
+    position: absolute;
+    z-index: 1;
+    /* padding-bottom: 300px; */
+    /* margin-bottom: 50px; */
+    margin-top: 75px;
+    font-weight: 900;
+    font-size: 80px;
+    text-align: center;
+    /* text-transform: uppercase; */
+}
+
+.coupon-gif {
+    /* padding-bottom: 100px; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 296px;
+    margin-right: 70px;
+}

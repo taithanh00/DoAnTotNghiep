@@ -1,0 +1,396 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+.product-card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.product-image {
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -khtml-transform: translate(-50%);
+    transition: all 0.2s ease-in-out;
+}
+
+.product-image img {
+    transition: all 0.2s ease-in-out;
+}
+
+.product-card:hover .product-image {
+    top: -40px;
+}
+
+.product-card:hover .product-image img {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.product-text .product-category {
+    transition: all 0.2s ease-in-out;
+}
+
+.product-text .product-category>* {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -khtml-transform: translate(-50%, -50%);
+}
+
+.product-text .product-category>span {
+    border: 1px solid #313131;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    transition: all 0.05s ease-in-out;
+}
+
+.product-card:hover .product-text .product-category>span {
+    border-color: #ddd;
+    box-shadow: none;
+    padding: 11px 28px;
+}
+
+.product-card:hover .product-text .product-category {
+    margin-top: 0px;
+}
+
+
+/* Truncate */
+
+.product-text .product-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.product-card-footer {
+    border-top: 1px solid #ddd;
+}
+
+a.product-buy {
+    border: 1px solid #212121;
+    transition: all 0.2s ease-in-out;
+}
+
+#product-img-last {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#product-img-last img {
+    height: 589px !important;
+    width: 544px !important;
+    border-radius: 6px;
+}
+
+#product-h4 {
+    font-family: "Dancing Script", cursive;
+    font-weight: 800;
+    font-size: 5em;
+    width: 5em;
+    line-height: 0.9em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1.5em;
+    padding-top: calc(50vh - 1em);
+}
+
+
+/* Style the rainbow text element. */
+
+.rainbow-text {
+    /* Create a conic gradient. */
+    /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
+    background: #ca4246;
+    background-color: #ca4246;
+    background: conic-gradient( #52006a 16.666%, #cd113b 16.666%, #cd113b 33.333%, #ff7600 33.333%, #ff7600 50%, #ffa900 50%, #ffa900 66.666%, #3db2ff 66.666%, #3db2ff 83.333%, #eb6383 83.333%);
+    /* Set thee background size and repeat properties. */
+    background-size: 57%;
+    background-repeat: repeat;
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Animate the text when loading the element. */
+    /* This animates it on page load and when hovering out. */
+    animation: rainbow-text-animation-rev 0.5s ease forwards;
+    cursor: pointer;
+}
+
+.rainbow-text:hover {
+    animation: rainbow-text-animation 0.5s ease forwards;
+}
+
+
+/* Move the background and make it larger. */
+
+
+/* Animation shown when hovering over the text. */
+
+@keyframes rainbow-text-animation {
+    0% {
+        background-size: 57%;
+        background-position: 0 0;
+    }
+    20% {
+        background-size: 57%;
+        background-position: 0 1em;
+    }
+    100% {
+        background-size: 300%;
+        background-position: -9em 1em;
+    }
+}
+
+
+/* Move the background and make it smaller. */
+
+
+/* Animation shown when entering the page and after the hover animation. */
+
+@keyframes rainbow-text-animation-rev {
+    0% {
+        background-size: 300%;
+        background-position: -9em 1em;
+    }
+    20% {
+        background-size: 57%;
+        background-position: 0 1em;
+    }
+    100% {
+        background-size: 57%;
+        background-position: 0 0;
+    }
+}
+
+#colorNav>ul>li {
+    box-shadow: 0 0 10px rgba(100, 100, 100, 0.2) inset, 1px 1px 1px #ccc;
+}
+
+#colorNav>ul>li>a {
+    color: inherit;
+    text-decoration: none !important;
+    font-size: 24px;
+    padding: 25px;
+}
+
+#colorNav li ul {
+    font: bold 12px "Open Sans Condensed", sans-serif;
+    -webkit-transition: max-height 0.4s linear;
+    -moz-transition: max-height 0.4s linear;
+    transition: max-height 0.4s linear;
+}
+
+#colorNav li ul li:nth-child(odd) {
+    /* zebra stripes */
+    background-color: #363636;
+}
+
+#colorNav li ul li:hover {
+    background-color: #444;
+}
+
+#colorNav li ul li:first-child {
+    border-radius: 3px 3px 0 0;
+    margin-top: 25px;
+    position: relative;
+}
+
+#colorNav li ul li:first-child:before {
+    /* the pointer tip */
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 5px solid transparent;
+    border-bottom-color: #313131;
+    left: 50%;
+    top: -10px;
+    margin-left: -5px;
+}
+
+#colorNav li ul li:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+
+/* This will trigger the CSS */
+
+
+/* transition animation on hover */
+
+#colorNav li:hover ul {
+    max-height: 200px;
+    /* Increase when adding more dropdown items */
+}
+
+.input {
+    color: black;
+    font: 1em/1.5 Hind, sans-serif;
+}
+
+form,
+.input,
+.caret {
+    margin: auto;
+}
+
+form {
+    position: relative;
+    width: 100%;
+    max-width: 17em;
+}
+
+.input,
+.caret {
+    display: block;
+    transition: all calc(1s * 0.5) linear;
+}
+
+.input {
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.25em inset;
+    caret-color: #255ff4;
+    width: 2em;
+    height: 2em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input:focus,
+.input:valid {
+    background: powderblue;
+    border-radius: 0.25em;
+    box-shadow: none;
+    padding: 0.75em 1em;
+    transition-duration: calc(1s * 0.25);
+    transition-delay: calc(1s * 0.25);
+    width: 100%;
+    height: 3em;
+}
+
+.input:focus {
+    animation: showCaret 1s steps(1);
+    outline: transparent;
+}
+
+.input:focus+.caret,
+.input:valid+.caret {
+    animation: handleToCaret 1s linear;
+    background: transparent;
+    width: 1px;
+    height: 1.5em;
+    transform: translate(0, -1em) rotate(-180deg) translate(7.5em, -0.25em);
+}
+
+.input::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+label {
+    color: #e3e4e8;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.caret {
+    background: black;
+    border-radius: 0 0 0.125em 0.125em;
+    margin-bottom: -0.6em;
+    width: 0.25em;
+    height: 1em;
+    transform: translate(0, -1em) rotate(-45deg) translate(0, 0.875em);
+    transform-origin: 50% 0;
+}
+
+
+/* Animations */
+
+@keyframes showCaret {
+    from {
+        caret-color: transparent;
+    }
+    to {
+        caret-color: #255ff4;
+    }
+}
+
+@keyframes handleToCaret {
+    from {
+        background: currentColor;
+        width: 0.25em;
+        height: 1em;
+        transform: translate(0, -1em) rotate(-45deg) translate(0, 0.875em);
+    }
+    25% {
+        background: currentColor;
+        width: 0.25em;
+        height: 1em;
+        transform: translate(0, -1em) rotate(-180deg) translate(0, 0.875em);
+    }
+    50%,
+    62.5% {
+        background: #255ff4;
+        width: 1px;
+        height: 1.5em;
+        transform: translate(0, -1em) rotate(-180deg) translate(7.5em, 2.5em);
+    }
+    75%,
+    99% {
+        background: #255ff4;
+        width: 1px;
+        height: 1.5em;
+        transform: translate(0, -1em) rotate(-180deg) translate(7.5em, -0.25em);
+    }
+    87.5% {
+        background: #255ff4;
+        width: 1px;
+        height: 1.5em;
+        transform: translate(0, -1em) rotate(-180deg) translate(7.5em, 0.125em);
+    }
+    to {
+        background: transparent;
+        width: 1px;
+        height: 1.5em;
+        transform: translate(0, -1em) rotate(-180deg) translate(7.5em, -0.25em);
+    }
+}
+
+
+/* @media screen and (max-width: 991px) {
+    .product-card {
+        margin: 40px auto;
+    }
+    .product-card .product-image {
+        top: -40px;
+    }
+    .product-card .product-image img {
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    }
+    .product-card .product-text .product-category>span {
+        border-color: #ddd;
+        box-shadow: none;
+        padding: 11px 28px;
+    }
+    .product-card .product-text .product-category {
+        margin-top: 0px;
+    }
+    a.product-buy {
+        border-color: #ff9800;
+        background: #ff9800;
+        color: #fff;
+    }
+} */

@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+    background: #f1f6f9;
+}
+
+#cart_main {
+    background: #f1f6f9;
+}
+
+#cart_h1 {
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    color: #212a3e;
+}
+
+#cart_h3 {
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    color: #212a3e;
+    font-size: 40px;
+}
+
+#cart_summmary {
+    background: #afd3e2;
+}
+
+#cart_product {
+    background: #f6f1f1;
+}
+
+#cart_h1:hover {
+    color: #9ba4b5;
+}
+
+@media (min-width: 1025px) {
+    .h-custom {
+        height: 100vh !important;
+    }
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+.bg-grey {
+    background-color: #eae8e8;
+}
+
+@media (min-width: 992px) {
+    .card-registration-2 .bg-grey {
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}
+
+@media (max-width: 991px) {
+    .card-registration-2 .bg-grey {
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}
+
+.fancy {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px;
+}
+
+.fancy::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+.fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+    color: white;
+    background: black;
+}
+
+.fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+}
+
+.fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}
+
+#delete-button {
+    border: 0;
+    /* margin-right: 10px; */
+}
+
+#delete-button::-webkit-scrollbar {
+    background-color: #f5f5f5;
+}
+
+#delete-button::-webkit-scrollbar-thumb {
+    background-color: red;
+}
+
+.cta {
+    border: none;
+    background: none;
+    margin-left: 43px;
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* .input-group {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 160px;
+}
+
+.submit-button {
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+    background: #2e2e2e;
+    border-radius: 0 10px 10px 0;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    transition: 0.3s;
+    background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+    cursor: pointer;
+}
+
+.submit-button:active {
+    transform: translate(0em, 0.2em);
+}
+
+.submit-button span {
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s;
+}
+
+.submit-button:hover span {
+    background: #2e2e2e;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s;
+}
+
+#input-field {
+    background-color: #2e2e2e;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    width: 300px;
+    padding-left: 8px;
+    color: white;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+::placeholder {
+    color: rgb(184, 184, 184);
+} */
